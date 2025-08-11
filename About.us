@@ -1,0 +1,65 @@
+<!-- About Us Section -->
+<section id="about" style="padding: 60px 0; background-color: #f9f9f9;">
+    <div class="container">
+        <div class="section-title">
+            <h2>About GK Master</h2>
+            <p>Your ultimate destination for general knowledge</p>
+        </div>
+        
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <p>GK Master is a comprehensive platform dedicated to providing high-quality general knowledge questions and resources. Our mission is to make learning fun and accessible to everyone.</p>
+            <p>Founded in 2023, we've grown to become one of the most trusted sources for GK preparation with over 10,000 questions across various categories.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Login Form (that wasn't working) -->
+<section id="login" style="padding: 60px 0;">
+    <div class="container">
+        <div style="max-width: 400px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+            <h3 style="text-align: center; margin-bottom: 20px;">Login</h3>
+            
+            <form id="login-form">
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 500;">Email</label>
+                    <input type="email" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px;" required>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 500;">Password</label>
+                    <input type="password" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px;" required>
+                </div>
+                
+                <button type="submit" style="width: 100%; padding: 12px; background: #4361ee; color: white; border: none; border-radius: 5px; font-weight: 500; cursor: pointer;">Login</button>
+                
+                <p style="text-align: center; margin-top: 15px;">
+                    Don't have an account? <a href="#register" style="color: #4361ee;">Register here</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script>
+    // This login form wasn't working - here's the fix
+    document.getElementById('login-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form values
+        const email = this.querySelector('input[type="email"]').value;
+        const password = this.querySelector('input[type="password"]').value;
+        
+        // Simple validation
+        if(!email || !password) {
+            alert('Please fill in all fields');
+            return;
+        }
+        
+        // Here you would normally send data to server
+        // For demo, we'll just show a success message
+        alert('Login successful! (This is a demo. In a real app, this would authenticate with your backend)');
+        
+        // Reset form
+        this.reset();
+    });
+</script>
